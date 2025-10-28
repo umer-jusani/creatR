@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
 
-      <section className="relative mt-14 z-10 py-16 | sm:py-23 px-6 bg-gradient-to-r from-gray-900/50 to-purple-900/20 ">
+      <section className="relative mt-14 z-10 py-16 | sm:py-23 px-6 bg-gradient-to-r from-gray-900/50 to-purple-900/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl | font-black text-center mb-12 sm:mb-16 lg:mb-20">
             <span className="gradient-text-primary">Loved by creators worldwide </span>
@@ -209,7 +209,42 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section >
+      </section>
+
+
+      <section className="relative z-10 py-16 | sm:py-23 sm:px-6 px-4 bg-gradient-to-r from-gray-900/50 to-purple-900/20">
+        <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl | font-black text-center">
+            <span className="gradient-text-primary">Ready to Create?</span>
+          </h2>
+          <p className="sm:text-lg text-gray-400 max-w-3xl mx-auto px-4">
+            Join thousands of creators who are already building thier audience and growing thier bussiness with our AI-powered platform.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+            <Link href="/dashboard">
+              <Button variant="primary" size="xl" className={"rounded-full w-full sm:w-auto text-white"}>
+                Start Creating For Free
+                <ArrowRightIcon className="w-4 h-4" />
+              </Button>
+            </Link>
+            <Link href="/dashboard">
+              <Button variant="outline" size="xl" className={"rounded-full w-full sm:w-auto text-white"}>
+                Explore the Feed
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <footer className="relative z-10 py-4 sm:py-8 sm:px-6 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-muted-foreground">
+            Made with ❤️ by{" "}
+            <span className="text-foreground font-semibold">RoadsideCoder</span>
+          </p>
+        </div>
+      </footer>
 
     </div >
   );
