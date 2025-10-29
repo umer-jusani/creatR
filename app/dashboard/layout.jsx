@@ -1,5 +1,5 @@
 "use client";
-import { FileText, LayoutDashboard, PenTool, SettingsIcon, Users, X } from 'lucide-react';
+import { FileText, LayoutDashboard, MenuIcon, PenTool, SettingsIcon, Users, X } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState } from 'react'
@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { usePathname } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';
+import { UserButton } from '@clerk/nextjs';
 
 
 const sidebarItems = [
@@ -104,8 +105,26 @@ const DashboardLayout = ({ children }) => {
                         </Button>
                     </Link>
                 </div>
+            </aside>
 
-            </aside >
+
+            <div className='lg:ml-58'>
+                <header className='fixed w-full top-0 lg:left-58 right-0 z-25 bg-slate-800/80 backdrop-blur-md border-b border-slate-700'>
+                    <div className='flex items-center justify-between px-4 lg:px-8 py-4'>
+                        <div>
+                            <Button variant={"ghost"} size={"icon"} className='lg:hidden' onClick={() => setIsOpen(!isOpen)}><MenuIcon className='w-5 h-5 text-white' /></Button>
+                        </div>
+                        <div>
+                            <UserButton />
+                        </div>
+                    </div>
+                </header>
+
+                <main className='pt-20'>
+                    {children}
+                </main>
+            </div>
+
         </div >
     )
 }
