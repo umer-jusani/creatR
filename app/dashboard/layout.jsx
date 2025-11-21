@@ -96,7 +96,7 @@ const DashboardLayout = ({ children }) => {
 
 
 
-                {/* contents */}
+                {/* content */}
                 <div className='absolute bottom-4 left-4 right-4'>
                     <Link href={"dashboard/settings"}>
                         <Button variant={"outline"} size={"sm"} className='w-full justify-start'>
