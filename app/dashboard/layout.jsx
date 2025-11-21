@@ -107,8 +107,6 @@ const DashboardLayout = ({ children }) => {
                 </div>
             </aside>
 
-            {/* asdasd */}
-
 
             <div className='lg:ml-58'>
                 <header className='fixed w-full top-0 lg:left-58 right-0 bg-slate-800/80 d-block backdrop-blur-md border-b border-slate-700 over'>
