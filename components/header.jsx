@@ -14,7 +14,7 @@ const Header = () => {
     const { isLoading, isAuthenticated } = useStoreUser();
     const path = usePathname();
 
-    if(path.includes("/dashboard")) {
+    if (path.includes("/dashboard")) {
         return null;
     }
 
@@ -25,9 +25,6 @@ const Header = () => {
                 <Link href={isAuthenticated ? "/feed" : "/"} className='flex-shrink-0'>
                     <Image src={"/logo.png"} alt="logo" width={96} height={32} className='h-8 sm:h10 w-auto object-contain' />
                 </Link>
-
-
-
 
 
                 <div className='flex items-center justify-end gap-2'>
