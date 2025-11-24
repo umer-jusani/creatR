@@ -53,7 +53,7 @@ const DashboardLayout = ({ children }) => {
                     </Button>
                 </div>
 
-                {/* sidebar items */}
+                {/* sidebar itemsss */}
                 <div className='p-4 flex flex-col gap-4'>
                     {sidebarItems.map((item, index) => {
                         const isActive = path === item.href || (path.startsWith(item.href) && item.href !== "/dashboard");
